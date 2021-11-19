@@ -28,3 +28,8 @@ print(Iron_Man)
 print(Iron_Man.get("budget"))
 print(Iron_Man.get("Budget"))
 print(Iron_Man["Lead_actor"])
+Iron_Man["main_cast"] = ["robert","pepper","jarwiz"]
+print(Iron_Man.get("main cast"))
+print(Iron_Man.pop("budget"))
+print(Iron_Man["main"
+               "qcast"])
