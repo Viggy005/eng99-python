@@ -26,8 +26,8 @@ print(f"pi is {pi:.2f}")
 print(f"{1/3:.2%}")
 
 name = input("enter your name\n")
-age = input("enter your age\n")
+age = int(input("enter your age\n"))
 pi = input("enter the value of pi\n")
 
-print(f"my name is {name} and am {age} years old and the value of pi is {pi}")
+print(f"my name is {name} and am {age+5} years old and the value of pi is {pi}")
 
