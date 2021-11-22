@@ -21,23 +21,25 @@ class Car:
     def get_speed(self):
         return self.speed
 
-slow_car = Car(100,20,10)
-print(slow_car.get_speed())
-slow_car.accelerate()
-print(slow_car.get_speed())
-slow_car.accelerate(2)
-print(slow_car.get_speed())
-slow_car.accelerate(2)
-print(slow_car.get_speed())
-slow_car.accelerate()
-slow_car.brakes(1)
-print(slow_car.get_speed())
-slow_car.brakes()
-print(slow_car.get_speed())
-slow_car.accelerate(3)
-print(slow_car.get_speed())
-slow_car.brakes(11)
-print(slow_car.get_speed())
+if __name__ =="__main__": # very imporant for importing things
+    slow_car = Car(100,20,10)
+    print(slow_car.get_speed())
+    slow_car.accelerate()
+    print(slow_car.get_speed())
+    slow_car.accelerate(2)
+    print(slow_car.get_speed())
+    slow_car.accelerate(2)
+    print(slow_car.get_speed())
+    slow_car.accelerate()
+    slow_car.brakes(1)
+    print(slow_car.get_speed())
+    slow_car.brakes()
+    print(slow_car.get_speed())
+    slow_car.accelerate(3)
+    print(slow_car.get_speed())
+    slow_car.brakes(11)
+    print(slow_car.get_speed())
+    print(__name__)
 
 
 
