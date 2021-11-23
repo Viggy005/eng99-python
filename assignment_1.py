@@ -55,14 +55,66 @@ print("\nQ2b\n")
 # A2b:
 def generate_id_based_on_postion_of_each_letter(name):
     id = []
+    id_str = ""
+
     for letter in name:
         id.append(find_position_of_letter(letter))
-    return id
+        id_str += str(find_position_of_letter(letter))
+    id_str = int(id_str)
+    return id_str
 
 print(generate_id_based_on_postion_of_each_letter("viggy"))
 
-test =[]
-print(len(test))
+#test =[]
+#print(len(test))
+print("\nQ2c\n")
+# Q2c: Create a function which turns this ID into a password. The function should subtract
+# the sum of the numbers in the id that was generated from the whole number of the id.
+# e.g. f("bob") -> 1134 (because bob's id was 1141 and 1+1+4+1 = 7 so 1141 - 7 = 1134)
+# A2c:
+# -------------------------------------------------------------------------------------- #
+#stg = "1234"
+#print(len(stg))
+def generate_password(name):
+    id = generate_id_based_on_postion_of_each_letter(name)
+    print(id)
+    number_to_subratct = 0
+    for no in range(len(str(id))):
+        number_to_subratct += int(str(id)[no])
+    password = id - number_to_subratct
+    return password
+
+print(generate_password("aaa"))
+
+print("\nQ3a\n")
+# Q3a: Write a function which takes an integer as an input, and returns true if the number is prime, false otherwise.
+# A3a:
+def check_if_prime(number):
+    if_prime = True
+    for no in range(2,number):
+        if number % no == 0:
+            if_prime = False
+    return if_prime
+print(check_if_prime(7))
+
+print("\nQ3b\n")
+# Q3b: Now add some functionality to the function which does not error if the user inputs something other than a digit
+# A3b:
+# -------------------------------------------------------------------------------------- #
+def no_error_check_if_prime(number):
+    if str(number).isdigit() == False:
+        return None
+    else:
+        if_prime = True
+        number = int(number)
+        for no in range(2, number):
+            if number % no == 0:
+                if_prime = False
+        return if_prime
+
+print(no_error_check_if_prime("7"))
+
+
 
 
 
