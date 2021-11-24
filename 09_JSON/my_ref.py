@@ -10,3 +10,5 @@ dic1 = {"Title": "Iron_man",
 
 dic2 = dic1["rating"]
 print(list(dic2.values()))
+var1 = "rating1"
+print(dic1[var1])
