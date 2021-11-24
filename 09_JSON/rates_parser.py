@@ -4,13 +4,14 @@ class RatesParser:
     def __init__(self,file_path):
         file_path = file_path
         exchange_dic = self.open_json_file(file_path)
+        print(type(exchange_dic))
         self.Base = exchange_dic.get("base")
         self.date = exchange_dic.get("date")
         self.GBP = exchange_dic["rates"]["GBP"]
         self.USD = exchange_dic["rates"]["USD"]
         self.AUD = exchange_dic["rates"]["AUD"]
         self.rates = exchange_dic["rates"]
-    def open_json_file(self,file_path) -> dict:
+    def open_json_file(self,file_path) -> dict: #doubt
         with open(file_path) as exchange_file:
             return json.load(exchange_file)
 
