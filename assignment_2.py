@@ -45,8 +45,8 @@ class Number:
             for x in range(2, self.integer):
                 if self.integer % x == 0:
                     return False
-                else:
-                    return True
+                #else:
+            return True
         else:
             return False
     def divisible_by_n(self, n):
@@ -96,14 +96,16 @@ class Boss(object):
 
 
 class GoodBoss(Boss):
-    def __init__(self,name,attitude,behaviour,face):
+    def __init__(self,name,attitude,behaviour,face,skill):
         super().__init__(name,attitude,behaviour,face)
+        self.skill = skill
 
     def encourage(self):
        print(f"The team cheers for {self.name}, starts shouting awesome slogans then gets back to work.")
 # A3a:
-david = GoodBoss("david","good","friendly","face")
+david = GoodBoss("david","good","friendly","face","python")
 print(david.get_behaviour())
 print(david.get_attitude())
+david.encourage()
 
 
