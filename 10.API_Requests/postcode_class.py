@@ -16,15 +16,20 @@ class Postcode:
             # data=json.dumps(json_data)
             json=self.json_data
         )
-        post_codes = self.multi_req.json()
+
 
         # self.multi_req = self.multi_req.json()
-        for res in post_codes["result"]:
-            self.latitude = res['result']['latitude']
-            self.longitude = res['result']['longitude']
-            self.eastings = res['result']['eastings']
-            self.northings = res['result']['northings']
-            self.post_code = res['result']['postcode']
+
+        if self.multi_req.status_code == 200:
+            post_codes = self.multi_req.json()
+            for res in post_codes["result"]:
+                self.latitude = res['result']['latitude']
+                self.longitude = res['result']['longitude']
+                self.eastings = res['result']['eastings']
+                self.northings = res['result']['northings']
+                self.post_code = res['result']['postcode']
+        else:
+            print("not entered a valid postcode")
 
 
 norwich = Postcode("nr22nq")
