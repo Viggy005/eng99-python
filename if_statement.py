@@ -28,3 +28,4 @@ elif certificate.upper() == "A":
     print("only 18+ can watch the film")
 else:
     print("you have not entered a valid certificate")
+
